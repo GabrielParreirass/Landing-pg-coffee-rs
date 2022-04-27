@@ -48,13 +48,12 @@ body {
 header {
     height: 50px;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 40px;
 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 
-    /* transform: scale(0.9) */
 }
 
 
@@ -66,6 +65,7 @@ header nav ul {
 
 header nav ul li {
     padding: 20px;
+    font-size: 1em;
 }
 
 header nav ul li:hover {
@@ -87,7 +87,7 @@ header button {
     z-index: 9999
 }
 
-header .img{
+header .img {
     width: 172px;
 }
 
@@ -111,7 +111,7 @@ header button:hover {
     cursor: pointer;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: center;
 }
@@ -120,35 +120,60 @@ nav{
     display: none;
 }
 
-
-section {
-    display: flex;
-    justify-content: center;
-    align-items:center;
-}
-
 .section-title #Gc {
     color: rgb(0, 0, 0);
     text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
 }
 
 .section-title {
-    margin-top:35px;
-    font-size: 45px;
-    
+    font-size: 3em;
+    text-align: center;
 }
 
-#photo-coffee{
+#section-photo {
+    display: flex;
+    justify-content: center;
+
+    z-index: 9999
+}
+
+#photo-coffee {
     overflow-y: hidden;
-    height:min-content;
-    z-index: 9999;
+    height: 100%;
 }
 
-#txt-mobile{
-    display:none;
+.container {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
 
-#txt-mobile button{
+#blur1 {
+    position: absolute;
+
+    bottom: 0;
+}
+
+#blur2 {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+}
+
+
+
+
+
+#txt-mobile {
+    display: none;
+    align-items: center;
+}
+
+#txt-mobile button {
     background-color: rgba(0, 0, 0, 0);
     border-width: 1px;
     border-color: var(--button);
@@ -168,71 +193,53 @@ section {
 
 
 
-#blur1{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-
-#blur2{
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-.blur{
-    height:500px
-}
-
-.container{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-}
-
 @media only screen and (max-width: 800px) {
 
     html,
     body {
-    overflow-y: scroll;
-}
-
-    .blur{
-        display:none;
+        overflow-y: scroll;
     }
 
-    #txt-mobile{
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
+    #blur1 {
+        display: none;
+    }
+
+    #blur2 {
+        display: none;
+    }
+    #txt-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
 
-    #txt-mobile button{
+    #txt-mobile button {
         margin-top: 50px;
     }
 
-    #txt-mobile p{
+    #txt-mobile p {
         padding: 35px;
         font-size: 30px;
-        margin-top:50px
+        margin-top: 50px;
+
+        text-align: center;
     }
 
 
     .section-title {
         padding: 20px;
-        margin-top:40px;
+        margin-top: 40px;
         font-size: 35px;
     }
-    
 
-    #photo-coffee{
+
+    #photo-coffee {
         overflow-y: hidden;
-        height:auto;
+        height: auto;
     }
 
-    
+
 
     header {
         width: 100%;
